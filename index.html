@@ -1,0 +1,394 @@
+```html
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NABIN - Rara Lake Nepal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#061a2b;
+    color:white;
+}
+
+/* HEADER */
+header{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+
+    background:
+    linear-gradient(rgba(0,20,40,.55),rgba(0,10,25,.8)),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero{
+    max-width:900px;
+}
+
+.logo{
+    font-size:25px;
+    color:#00ffff;
+    letter-spacing:8px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(60px,12vw,130px);
+    background:linear-gradient(
+        90deg,
+        #00ffff,
+        #00ff88,
+        #ffff00,
+        #00bfff
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+
+    text-shadow:0 0 30px #00ffff88;
+}
+
+.hero p{
+    font-size:22px;
+    margin:20px 0;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:30px;
+    background:#00d9ff;
+    color:#00121c;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:20px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 30px #00ffff;
+}
+
+/* NAVBAR */
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#03101cdd;
+    backdrop-filter:blur(10px);
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00ffff;
+}
+
+/* SECTION */
+section{
+    padding:70px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:42px;
+    color:#00ffff;
+    margin-bottom:40px;
+}
+
+/* INFO CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:linear-gradient(145deg,#0b3048,#082235);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid #00ffff44;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px #00ffff33;
+}
+
+.card h3{
+    color:#00ffcc;
+    margin-bottom:12px;
+}
+
+/* CONTENT */
+.content{
+    max-width:1000px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+    color:#d8f7ff;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px #00ffff66;
+}
+
+/* FOOTER */
+footer{
+    background:#020b12;
+    text-align:center;
+    padding:30px;
+    color:#9edee8;
+}
+
+.nabin{
+    color:#ff00cc;
+    font-weight:bold;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    nav a{
+        margin:0 6px;
+        font-size:13px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .title{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+    <div class="hero">
+
+        <div class="logo">
+            NABIN WEBSITE
+        </div>
+
+        <h1>RARA</h1>
+
+        <p>
+            नेपालको सुन्दर र प्रसिद्ध प्राकृतिक गन्तव्य
+        </p>
+
+        <a href="#about" class="btn">
+            Rara को बारेमा हेर्नुहोस्
+        </a>
+
+    </div>
+</header>
+
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="#about">परिचय</a>
+    <a href="#facts">जानकारी</a>
+    <a href="#visit">घुम्न जाने</a>
+    <a href="#gallery">Gallery</a>
+</nav>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2 class="title">
+        🏔️ रारा तालको परिचय
+    </h2>
+
+    <div class="content">
+
+        <p>
+            रारा ताल नेपालको मुगु जिल्लामा अवस्थित प्रसिद्ध
+            प्राकृतिक ताल हो। यो रारा राष्ट्रिय निकुञ्जभित्र
+            रहेको छ र नेपालको प्रमुख पर्यटकीय गन्तव्यमध्ये
+            एक हो।
+        </p>
+
+        <br>
+
+        <p>
+            निलो र शान्त पानी, वरिपरिका हरियालीयुक्त पहाड,
+            हिमाली वातावरण र प्राकृतिक सौन्दर्यका कारण
+            रारा ताललाई नेपालको आकर्षक प्राकृतिक गन्तव्य
+            मानिन्छ।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FACTS -->
+<section id="facts">
+
+    <h2 class="title">
+        📍 Rara Lake Information
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>📍 स्थान</h3>
+            <p>
+                मुगु जिल्ला,<br>
+                कर्णाली प्रदेश, नेपाल
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🏔️ उचाइ</h3>
+            <p>
+                समुद्री सतहबाट करिब<br>
+                2,990 मिटर
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌊 ताल</h3>
+            <p>
+                नेपालको प्रसिद्ध<br>
+                हिमाली ताल
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌲 क्षेत्र</h3>
+            <p>
+                रारा राष्ट्रिय<br>
+                निकुञ्ज क्षेत्र
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VISIT -->
+<section id="visit">
+
+    <h2 class="title">
+        🚗 रारा कसरी जाने?
+    </h2>
+
+    <div class="content">
+
+        <p>
+            रारा ताल पुग्न नेपालका विभिन्न शहरबाट सडक तथा
+            हवाई मार्ग प्रयोग गर्न सकिन्छ। सामान्यतया
+            नेपालगञ्ज वा सुर्खेततर्फबाट यात्रा गर्दै
+            मुगु जिल्लातर्फ जान सकिन्छ।
+        </p>
+
+        <br>
+
+        <p>
+            यात्राको बाटो र मौसमअनुसार यात्रा समय फरक हुन
+            सक्छ। वर्षायाममा सडकको अवस्था परिवर्तन हुन
+            सक्ने भएकाले यात्रा अघि स्थानीय अवस्था बुझ्नु
+            राम्रो हुन्छ।
+        </p>
+
+        <br>
+
+        <p>
+            रारा क्षेत्रमा प्राकृतिक वातावरण संरक्षण गर्नु,
+            फोहोर नफाल्नु र स्थानीय नियमहरूको पालना गर्नु
+            महत्त्वपूर्ण हुन्छ।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery">
+
+    <h2 class="title">
+        📸 Rara Gallery
+    </h2>
+
+    <div class="gallery">
+
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80">
+
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80">
+
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=80">
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 <span class="nabin">NABIN</span> Website
+    </p>
+
+    <p>
+        Made with ❤️ in Nepal 🇳🇵
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
